@@ -2,11 +2,15 @@ const express = require("express");
 const fs = require('fs');
 const app = express();
 const port = 3000;
+require('dotenv').config();
+const API_Key = process.env.KEY;
+
 app.use((req, res, next) => {
-    //const apiKey = req.query.api_key;
-    //if (apiKey != API_Key) {
-    //    return res.status(401).json({error: "Stinky key!"})
-    //}
+    console.log(API_Key);
+    const apiKey = req.query.key;
+    if (apiKey != API_Key) {
+        return res.status(401).json({error: "Stinky key!"})
+    }
     next();
 })
 let chars = {}
