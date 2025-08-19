@@ -35,14 +35,8 @@ jobs:
         uses: actions/setup-node@v4
       - name: Install dependencies
         run: npm install
-      - name: list user
-        run: echo $LOGNAME
-      - name: list user2
-        run: echo $SUDO_USER
-      - name: list user3
-        run: echo $USER
       - name: Give permissions
-        run: sudo chown -R Floppicus ./node_modules
+        run: sudo chown -R runner ./node_modules
       - name: Build app
         run: npm run build
       - name: Setup Pages
