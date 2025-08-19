@@ -35,6 +35,8 @@ jobs:
         uses: actions/setup-node@v4
       - name: Install dependencies
         run: npm install
+      - name: Give permissions
+        run: sudo chown -R runner ./node_modules
       - name: Build app
         run: npm run build
       - name: Setup Pages
