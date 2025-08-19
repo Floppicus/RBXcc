@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "modern-rcon": "^1.0.3",
+    "ts-rcon": "^1.2.1"
+  }
+}

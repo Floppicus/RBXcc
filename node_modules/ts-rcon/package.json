@@ -1,0 +1,71 @@
+{
+  "name": "ts-rcon",
+  "version": "1.2.1",
+  "description": "Rcon client implemented in Node.js with TypeScript",
+  "license": "MIT",
+  "author": "Bharat Middha <5100938+bmiddha@users.noreply.github.com>",
+  "homepage": "https://bmiddha.github.io/ts-rcon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmiddha/ts-rcon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bmiddha/ts-rcon/issues"
+  },
+  "main": "dist/index.js",
+  "module": "dist/ts-rcon.esm.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsdx build",
+    "lint": "tsdx lint",
+    "lint:fix": "tsdx lint --fix",
+    "start": "tsdx watch",
+    "test": "tsdx test",
+    "test:watch": "yarn test --watch"
+  },
+  "typings": "dist/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^15.6.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier-package-json": "^2.6.0",
+    "tsdx": "^0.14.1",
+    "typescript": "^4.3.2"
+  },
+  "keywords": [
+    "csgo",
+    "es6",
+    "minecraft",
+    "rcon",
+    "source",
+    "tcp",
+    "tf2",
+    "typescript",
+    "udp"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "(src|test)/**": [
+      "yarn lint:fix",
+      "git add"
+    ],
+    "package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
